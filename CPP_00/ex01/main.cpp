@@ -6,31 +6,28 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:02:10 by hlichten          #+#    #+#             */
-/*   Updated: 2025/10/30 21:15:47 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/05 00:27:32 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
-#include <cstring>
-#include "PhoneBook.hpp"
-
-void	add_command(void);
-void	search_command(void);
-int		exit_command(void);
+#include "Utils.hpp"
 
 int main()
 {
-	int running = 1;
-	//int index = 0;
+	PhoneBook book;
+	bool running = true;
+	int index = 0;
 
 	std::cout << "type 'ADD' to add a contact, 'SEARCH' to search for a contact or 'EXIT to leave the program" << std::endl;
 	while (running){
 		std::cout << "Command : ";
 		std::string buffer;
-		std::cin >> buffer;
+		if (!std::getline(std::cin, buffer)){
+			std::cout << "Error: input failed." << std::endl;
+			return ;
+		}
 		if (buffer == "ADD")
-			add_command();
+			add_command(book, index);
 		else if (buffer == "SEARCH")
 			search_command();
 		else if (buffer == "EXIT")
@@ -40,18 +37,8 @@ int main()
 	return 0;
 }
 
-void	add_command(void){
-	std::cout << "'ADD' baby" << std::endl;
-}
 
-void	search_command(void){
-	std::cout << "'SEARCH' baby" << std::endl;
-}
 
-int		exit_command(void){
-	std::cout << "Thank you for using this awsome PhoneBook, see you next time !" << std::endl;
-	return (0);
-}
 
 // Welcome to the 80s and their unbelievable technology! Write a program that behaves 
 // like a crappy awesome phonebook software.

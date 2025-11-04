@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:09:54 by hlichten          #+#    #+#             */
-/*   Updated: 2025/10/30 23:41:56 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/04 20:50:16 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@ int	main(int ac, char **av)
 		std::string buffer;
 		for (int i = 1; i < ac; i++){
 			buffer += av[i];
-			if (i < ac - 1)
-				buffer += " ";
 		}
 		for (size_t i = 0; i < buffer.length(); i++)
 			buffer[i] = std::toupper(buffer[i]);
+		
 		std::cout << buffer << std::endl;
 	}
 	return 0;
