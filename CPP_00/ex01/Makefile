@@ -6,7 +6,7 @@ RM          = rm -rf
 OBJ_DIR     = obj
 SRC_DIR     = .
 
-SRC         = PhoneBook.cpp main.cpp
+SRC         = PhoneBook.cpp main.cpp Contact.cpp Utils.cpp
 
 OBJ         = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 

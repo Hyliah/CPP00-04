@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:02:10 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/05 00:27:32 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/06 01:00:33 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int main()
 		std::string buffer;
 		if (!std::getline(std::cin, buffer)){
 			std::cout << "Error: input failed." << std::endl;
-			return ;
+			return 1;
 		}
 		if (buffer == "ADD")
 			add_command(book, index);
 		else if (buffer == "SEARCH")
-			search_command();
+			search_command(book, index);
 		else if (buffer == "EXIT")
 			running = exit_command();
 	}

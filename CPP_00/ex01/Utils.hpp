@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/05 00:28:56 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/06 01:00:10 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 
 #include <iostream>
 #include <iostream>
-#include <cctype>
+#include <iomanip>
 #include <cstring>
+#include <cctype>
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
 
-std::string	get_line(std::string &buffer);
+void	get_line(std::string &buffer);
+void	add_command(PhoneBook &book, int index);
+void	search_command(PhoneBook &book, int index);
 
-void	    add_command(PhoneBook &book, int index);
-void	    search_command(void);
+int		exit_command(void);
 
-int		    exit_command(void);
-
-bool        verify_entry(const std::string& str, bool is_phone_number);
+bool	verify_entry(const std::string& str, bool is_phone_number);
 
 #endif

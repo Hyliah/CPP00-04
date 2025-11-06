@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:29:40 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/04 23:23:26 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/06 00:14:04 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ void    Contact::set_last_name(std::string str){
 
 std::string Contact::get_nickname(void) const{
     return (this -> _Nickname);
+}
+
+void    Contact::set_nickname(std::string str){
+    this->_Nickname = str;
 }
 
 void    Contact::set_phone_number(std::string str){
