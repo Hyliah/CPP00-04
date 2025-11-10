@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:02:10 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/06 01:00:33 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/10 17:32:15 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int main()
 {
 	PhoneBook book;
 	bool running = true;
-	int index = 0;
 
 	std::cout << "type 'ADD' to add a contact, 'SEARCH' to search for a contact or 'EXIT to leave the program" << std::endl;
 	while (running){
@@ -27,9 +26,9 @@ int main()
 			return 1;
 		}
 		if (buffer == "ADD")
-			add_command(book, index);
+			add_command(book);
 		else if (buffer == "SEARCH")
-			search_command(book, index);
+			search_command(book);
 		else if (buffer == "EXIT")
 			running = exit_command();
 	}

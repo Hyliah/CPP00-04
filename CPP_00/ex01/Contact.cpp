@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:29:40 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/06 00:14:04 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/10 16:15:39 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include "Contact.hpp"
 
 Contact::Contact(void){
-
+    std::cout << "constructed" << std::endl;    
 }
 
 Contact::~Contact(void){
-
+    std::cout << "destructed" << std::endl;
 }
 
 std::string Contact::get_first_name(void) const{

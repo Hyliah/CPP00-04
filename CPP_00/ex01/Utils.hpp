@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/06 01:00:10 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/10 17:31:53 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 #include "Contact.hpp"
 
 void	get_line(std::string &buffer);
-void	add_command(PhoneBook &book, int index);
-void	search_command(PhoneBook &book, int index);
+void	add_command(PhoneBook &book);
+void	search_command(PhoneBook &book);
 
 int		exit_command(void);
 

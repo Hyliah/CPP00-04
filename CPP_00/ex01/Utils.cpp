@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:24:25 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/06 01:05:08 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/10 17:49:36 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,16 @@
 static void    ask_set_contact(std::string message, std::string &buffer, Contact &contact, void (Contact::*setter)(std::string), bool is_phone);
 static std::string	adjust_size(std::string str);
 
-void	add_command(PhoneBook &book, int index){
+void	add_command(PhoneBook &book){
 	std::string buffer;
-	Contact &c = book.get_contact(index);
+	Contact c;
 	
 	ask_set_contact("Enter First Name : ", buffer, c, (&Contact::set_first_name), false);
-	ask_set_contact("Enter Last Name : ", buffer, c, (&Contact::set_first_name), false);
-	ask_set_contact("Enter Nickname : ", buffer, c, (&Contact::set_first_name), false);
-	ask_set_contact("Enter Phone Number : ", buffer, c, (&Contact::set_first_name), true);
-	ask_set_contact("Enter Darkest Secret : ", buffer, c, (&Contact::set_first_name), false);
+	ask_set_contact("Enter Last Name : ", buffer, c, (&Contact::set_last_name), false);
+	ask_set_contact("Enter Nickname : ", buffer, c, (&Contact::set_nickname), false);
+	ask_set_contact("Enter Phone Number : ", buffer, c, (&Contact::set_phone_number), true);
+	ask_set_contact("Enter Darkest Secret : ", buffer, c, (&Contact::set_darkest_secret), false);
+	book.add_contact(c);
 }
 
 static void    ask_set_contact(std::string message, std::string &buffer, Contact &contact, void (Contact::*setter)(std::string), bool is_phone)
@@ -41,13 +42,17 @@ static void    ask_set_contact(std::string message, std::string &buffer, Contact
 	}
 	(contact.*setter)(buffer);
 }
-void	search_command(PhoneBook &book, int index){
-	Contact &c = book.get_contact(index);
+void	search_command(PhoneBook &book){
+	int	count = book.get_count();
 
-	std::cout << std::setw(10) << index << " | ";
-	std::cout << std::setw(10) << adjust_size(c.get_first_name()) << " | ";
-	std::cout << std::setw(10) << adjust_size(c.get_last_name()) << " | ";
-	std::cout << std::setw(10) << adjust_size(c.get_nickname()) << std::endl;
+	for (int i = 0; i < count ; i++)
+	{
+		Contact &c = book.get_contact(i);
+		std::cout << std::setw(10) << i << " | ";
+		std::cout << std::setw(10) << adjust_size(c.get_first_name()) << " | ";
+		std::cout << std::setw(10) << adjust_size(c.get_last_name()) << " | ";
+		std::cout << std::setw(10) << adjust_size(c.get_nickname()) << std::endl;
+	}
 }
 
 static std::string	adjust_size(std::string str)
