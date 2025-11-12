@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:16:36 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/10 17:37:40 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/11 21:28:43 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@
 
 class PhoneBook {
     private :
-        Contact contacts[8];
-        int count;
-        int next_index;
+        Contact _Contacts[8];
+        int _Count;
+        int _NextIndex;
     public:
-        // voir video pour l initialisation des variable count et index
         PhoneBook(void);
         ~PhoneBook(void);
         
