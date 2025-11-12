@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:35:17 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/12 19:54:25 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/12 22:08:47 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,6 @@ void	search_command(PhoneBook &book){
 
 static std::string	adjust_format(std::string str)
 {
-
-	// for (size_t i = 0; i < str.length(); ++i){
-	// 	if (std::isspace(static_cast<unsigned char>(str[i])))
-	// 			alphanum++;
-	// }
-
-
 	if (str.length() > 10)
 		return (str.substr(0,9) + ".");
 	return str;

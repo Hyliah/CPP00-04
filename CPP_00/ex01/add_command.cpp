@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_cmmand.cpp                                     :+:      :+:    :+:   */
+/*   add_command.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:40:34 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/12 18:37:54 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/12 22:10:25 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 static bool	verify_entry(const std::string& str, bool is_phone_number);
 static void	ask_set_contact(std::string message, std::string &buffer, Contact &contact, void (Contact::*setter)(std::string), bool is_phone);
+static void	handle_spaces(std::string &str);
 
 void	add_command(PhoneBook &book){
 	std::string buffer;
@@ -27,7 +28,6 @@ void	add_command(PhoneBook &book){
 	book.add_contact(c);
 }
 
-// system avec getline a checker
 static void    ask_set_contact(std::string message, std::string &buffer, Contact &contact, void (Contact::*setter)(std::string), bool is_phone)
 {
 	std::cout << message;
@@ -38,8 +38,29 @@ static void    ask_set_contact(std::string message, std::string &buffer, Contact
 		if (get_line(buffer))
 			return ;
 	}
+	handle_spaces(buffer);
 	(contact.*setter)(buffer);
 }
+
+static void	handle_spaces(std::string &str){
+	std::string	result;
+	bool space = false;
+	for (size_t i = 0; i < str.length(); i++){
+		if (std::isspace(static_cast<unsigned char>(str[i])))
+		{
+			if (!space && !result.empty())
+				result += ' ';
+			space = true;
+		}
+		else
+		{
+			result += str[i];
+			space = false;
+		}
+	}
+	str = result;
+}
+
 
 static bool	verify_entry(const std::string& str, bool is_phone_number)
 {
