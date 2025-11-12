@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/10 20:36:47 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/12 19:05:48 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ void	search_command(PhoneBook &book);
 
 int		exit_command(void);
 int 	get_line(std::string &buffer);
-
-bool	verify_entry(const std::string& str, bool is_phone_number);
 
 #endif
