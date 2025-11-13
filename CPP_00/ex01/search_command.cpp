@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:35:17 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/12 22:08:47 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/13 19:18:07 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ void	search_command(PhoneBook &book){
 	for (int i = 0; i < count ; i++)
 	{
 		Contact &c = book.get_contact(i);
-		std::cout << std::setw(10) << i << " | ";
-		std::cout << std::setw(10) << adjust_format(c.get_first_name()) << " | ";
-		std::cout << std::setw(10) << adjust_format(c.get_last_name()) << " | ";
-		std::cout << std::setw(10) << adjust_format(c.get_nickname()) << std::endl;
+		std::cout << std::setw(10) << std::right << i << "|";
+		std::cout << std::setw(10) << std::right << adjust_format(c.get_first_name()) << "|";
+		std::cout << std::setw(10) << std::right << adjust_format(c.get_last_name()) << "|";
+		std::cout << std::setw(10) << std::right << adjust_format(c.get_nickname()) << std::endl;
 	}
 	if (book.get_count() >= 1)
-		display_contact(book, count);
+		(display_contact(book, count));
 	else
 		std::cout << "No contact to display" << std::endl;
 }
@@ -47,11 +47,11 @@ static void	display_contact(PhoneBook &book, int count){
 
 	std::cout << "Enter an index number : ";
 	if (get_line(buffer))
-		return ;
+		return;
 	while (verify_number(index_max, buffer) == false){
 		std::cout << "Enter an index number : ";
 		if (get_line(buffer))
-			return ;
+			return;
 	}
 	print_contact(book, static_cast<unsigned int>(buffer[0] - '0'));
 }
