@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:55 by hlichten         ###   ########.fr       */
+/*   Created: 2025/11/20 18:23:18 by hlichten          #+#    #+#             */
+/*   Updated: 2025/11/21 18:27:05 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef HUMANA_H
+# define HUMANA_H
 
-#include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <cctype>
+#include "Weapon.hpp"
+#include "HumanB.hpp"
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+class HumanA
+{
+	private:
+		std::string	_name;
+		Weapon& _weapon;
+	public:
+		HumanA(std::string name, Weapon& weapon);
+		~HumanA(void);
 
-void	add_command(PhoneBook &book);
-void	search_command(PhoneBook &book);
-
-int		exit_command(void);
-int 	get_line(std::string &buffer);
+		void	attack(void);
+};
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:02:10 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/13 23:08:41 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/14 17:59:50 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int main()
 }
 
 
-
-
 // Welcome to the 80s and their unbelievable technology! Write a program that behaves 
 // like a crappy awesome phonebook software.
 
@@ -63,6 +61,7 @@ int main()
 // ◦ If the user enters this command, they are prompted to input the information of the new contact one field at a time. 
 // Once all the fields have been completed, add the contact to the phonebook.
 // ◦ The contact fields are: first name, last name, nickname, phone number, and darkest secret. A saved contact can’t have empty fields.
+
 // • SEARCH: display a specific contact
 // ◦ Display the saved contacts as a list of 4 columns: index, first name, last
 // name and nickname.
@@ -70,6 +69,7 @@ int main()
 // If the text is longer than the column, it must be truncated and the last displayable character must be replaced by a dot (’.’).
 // ◦ Then, prompt the user again for the index of the entry to display. If the index is out of range or wrong, define a relevant behavior. 
 // Otherwise, display the contact information, one field per line.
+
 // • EXIT
 // ◦ The program quits and the contacts are lost forever!
 // • Any other input is ignored.

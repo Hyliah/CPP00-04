@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:55 by hlichten         ###   ########.fr       */
+/*   Created: 2025/11/14 16:54:17 by hlichten          #+#    #+#             */
+/*   Updated: 2025/11/20 15:40:41 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "Zombie.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <cctype>
+Zombie* zombieHorde(int N, const std::string& name)
+{
+	void* raw = ::operator new[](N * sizeof(Zombie));
+	Zombie* horde = static_cast<Zombie*>(raw);
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
-
-void	add_command(PhoneBook &book);
-void	search_command(PhoneBook &book);
-
-int		exit_command(void);
-int 	get_line(std::string &buffer);
-
-#endif
+	for (int i = 0; i < N; i++)
+		new (&horde[i]) Zombie(name + '_' + std::to_string(i));
+	return (&horde[0]);
+}

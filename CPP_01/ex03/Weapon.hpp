@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:55 by hlichten         ###   ########.fr       */
+/*   Created: 2025/11/20 18:27:42 by hlichten          #+#    #+#             */
+/*   Updated: 2025/11/21 18:35:43 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef WEAPON_H
+# define WEAPON_H
 
-#include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <cctype>
+# include <iostream>
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+class Weapon{
+	private:
+		std::string _type;
 
-void	add_command(PhoneBook &book);
-void	search_command(PhoneBook &book);
+	public:
+		Weapon(std::string type);
+		~Weapon(void);
 
-int		exit_command(void);
-int 	get_line(std::string &buffer);
+		void	setType(std::string type);
+		std::string getType(void);
+};
 
 #endif

@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:55 by hlichten         ###   ########.fr       */
+/*   Created: 2025/11/20 18:23:21 by hlichten          #+#    #+#             */
+/*   Updated: 2025/11/21 18:14:50 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <cctype>
+HumanA::HumanA(std::string name, Weapon& weapon): _name(name), _weapon(weapon){
+}
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+HumanA::~HumanA(void){
+}
 
-void	add_command(PhoneBook &book);
-void	search_command(PhoneBook &book);
-
-int		exit_command(void);
-int 	get_line(std::string &buffer);
-
-#endif
+void	HumanA::attack(void){
+	std::cout << this->_name << " attacks with their " << this->_weapon.getType() << std::endl;
+}

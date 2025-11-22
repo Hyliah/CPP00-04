@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:55 by hlichten         ###   ########.fr       */
+/*   Created: 2025/11/14 16:54:19 by hlichten          #+#    #+#             */
+/*   Updated: 2025/11/20 15:36:56 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#ifndef ZOMBIE_H
+# define ZOMBIE_H
 
-#include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <cctype>
+# include <iostream>
+# include <new>
+# include <stdio.h>
+# include <stdlib.h>
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+class Zombie{
+	private :
+		std::string _name;
+	public :
+		Zombie(std::string name);
+		~Zombie();
+		void announce( void );
+};
 
-void	add_command(PhoneBook &book);
-void	search_command(PhoneBook &book);
-
-int		exit_command(void);
-int 	get_line(std::string &buffer);
-
+Zombie* zombieHorde(int N, const std::string& name);
 #endif

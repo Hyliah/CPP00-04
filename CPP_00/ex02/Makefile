@@ -6,7 +6,7 @@ RM          = rm -rf
 OBJ_DIR     = obj
 SRC_DIR     = .
 
-SRC         = main.cpp fichiers.cpp
+SRC         = Account.cpp Account.hpp tests.cpp
 
 OBJ         = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 

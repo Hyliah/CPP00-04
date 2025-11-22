@@ -46,6 +46,8 @@
         "array": "cpp",
         "optional": "cpp",
         "unordered_map": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iomanip": "cpp",
+        "fstream": "cpp"
     }
 }

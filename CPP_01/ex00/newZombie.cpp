@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Utils.hpp                                          :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 00:24:23 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 15:28:55 by hlichten         ###   ########.fr       */
+/*   Created: 2025/11/14 15:24:29 by hlichten          #+#    #+#             */
+/*   Updated: 2025/11/14 16:45:28 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "Zombie.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <cctype>
-
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
-
-void	add_command(PhoneBook &book);
-void	search_command(PhoneBook &book);
-
-int		exit_command(void);
-int 	get_line(std::string &buffer);
-
-#endif
+//This function creates a zombie, names it, and returns it so you can use it outside of the function scope.
+Zombie* newZombie( std::string name ){
+    Zombie *Z = new Zombie(name);
+    return Z;
+}
