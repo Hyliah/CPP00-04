@@ -14,7 +14,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@echo "\033[0;35m ./$(NAME) \033[0m ready to use"
+	@echo "\033[0;35m ./$(NAME) \033[0m ready to use. One argument needed : DEBUG, INFO, WARNING or ERROR"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(OBJ_DIR)
