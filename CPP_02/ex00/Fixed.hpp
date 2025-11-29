@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:02:27 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/26 19:24:28 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/28 22:22:33 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class Fixed{
     private:
-        int _value;
-        static const int _bits = 8;
+        int                 _raw;
+        static const int    _bits = 8;
     public:
         Fixed();
         Fixed(const Fixed& other);

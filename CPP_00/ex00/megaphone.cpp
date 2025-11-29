@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:09:54 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/04 20:50:16 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/29 00:43:31 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,16 @@
 #include <cctype>
 #include <cstring>
 
+static bool is_in_ascii(char *str);
+
 int	main(int ac, char **av)
 {
+	if (is_in_ascii(av[1]) == false)
+		return (std::cout << "megaphone understand only ascii printable entries." << std::endl, 1);
 	if (ac < 2)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else{
+	else
+	{
 		std::string buffer;
 		for (int i = 1; i < ac; i++){
 			buffer += av[i];
@@ -31,6 +36,13 @@ int	main(int ac, char **av)
 	return 0;
 }
 
+static bool is_in_ascii(char *str){
+	for (int i = 0; str[i]; i++){
+		if (str[i] < 32 || str[i] > 127)
+			return false;
+	}
+	return true;
+}
 
 /*
 Just to make sure that everybody is awake, write a program that produces the following output:
