@@ -7,7 +7,7 @@ RM          = rm -rf
 OBJ_DIR     = obj
 SRC_DIR     = .
 
-SRC         = main.cpp Fixed.cpp FixedArithmetic.cpp FixedComparison.cpp FixedIncrementDecrement.cpp 
+SRC         = main.cpp Fixed.cpp FixedArithmetic.cpp FixedComparison.cpp FixedIncrementDecrement.cpp FixedMinMax.cpp
 
 OBJ         = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 

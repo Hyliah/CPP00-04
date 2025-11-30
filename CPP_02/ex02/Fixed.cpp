@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 19:32:26 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/29 02:40:02 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/11/29 21:51:10 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  */
 
 Fixed::Fixed():_raw(0) {
-	std::cout << "Default constructor called" << std::endl;
+
 }
 
 /**
@@ -33,7 +33,6 @@ Fixed::Fixed():_raw(0) {
  */
 
 Fixed::Fixed(const int n):_raw(n) {
-	std::cout << "Int constructor called" << std::endl;
 	this->_raw = n << _bits;
 }
 
@@ -51,7 +50,6 @@ Fixed::Fixed(const int n):_raw(n) {
  */
 
 Fixed::Fixed(const float f):_raw(f) {
-	std::cout << "Float constructor called" << std::endl;
 	this->_raw = (roundf(f * (1 << _bits)));
 }
 
@@ -61,7 +59,6 @@ Fixed::Fixed(const float f):_raw(f) {
  */
 
 Fixed::Fixed(const Fixed& other):_raw(other._raw) {
-	std::cout << "Copy constructor called" << std::endl;
 }
 
 /**
@@ -71,7 +68,6 @@ Fixed::Fixed(const Fixed& other):_raw(other._raw) {
  */
 
 Fixed& Fixed::operator=(const Fixed& other){
-	std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &other)
 		this->_raw = other._raw;
 	return *this;
@@ -81,7 +77,6 @@ Fixed& Fixed::operator=(const Fixed& other){
  * @brief Destroy the Fixed:: Fixed object
  */
 Fixed::~Fixed(){
-	std::cout << "Destructor called" << std::endl;
 }
 
 /**
