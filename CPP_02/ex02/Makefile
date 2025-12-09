@@ -1,7 +1,7 @@
 NAME        = nowWeAreTalking
 CXX         = c++
 CXXFLAGS    = 
-#CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
 
 OBJ_DIR     = obj
