@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:03:06 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/09 22:57:51 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/09 23:50:39 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int main() {
     ClapTrap steve("Steve");
+
+	steve.beRepaired(5);
 
     std::cout << "\n=== Steve tries to attack with no attack Damage ===" << std::endl;
 
@@ -26,10 +28,10 @@ int main() {
     steve.takeDamage(4);
 
     std::cout << "\n=== Steve tries to fix himself ===" << std::endl;
-    steve.beRepaired(5);
+    steve.beRepaired(15);
 
     std::cout << "\n=== Steve wastes all his energy ===" << std::endl;
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 10; i++) {
         steve.attack("the darkness");
     }
 

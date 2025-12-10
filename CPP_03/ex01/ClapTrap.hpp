@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 15:03:03 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/09 23:54:59 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/10 00:22:51 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 
 class ClapTrap{
-	private :
+	protected :
 		std::string _name;
 		int 		_hitPoints;
 		int 		_energyPoints;
