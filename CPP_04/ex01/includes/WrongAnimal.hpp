@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 16:02:27 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/11 19:43:04 by hlichten         ###   ########.fr       */
+/*   Created: 2025/12/11 18:52:27 by hlichten          #+#    #+#             */
+/*   Updated: 2025/12/11 21:11:09 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef WRONG_ANIMAL_H
+# define WRONG_ANIMAL_H
 
 # include <iostream>
 
-class Fixed{
-    private:
-        int                 _raw;
-        static const int    _bits = 8;
-    public:
-        Fixed();
-        Fixed(const Fixed& other);
-        Fixed& operator=(const Fixed& other);
-        ~Fixed();
+class WrongAnimal{
+	protected:
+		std::string _type;
 
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
+	public :
+		WrongAnimal();
+		WrongAnimal(const std::string& type);
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal& operator=(const WrongAnimal& other);
+		~WrongAnimal();
+
+		void makeSound() const;
+		std::string getType() const;
 };
 
 #endif

@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 16:02:27 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/11 19:43:04 by hlichten         ###   ########.fr       */
+/*   Created: 2025/12/11 18:42:38 by hlichten          #+#    #+#             */
+/*   Updated: 2025/12/11 20:13:15 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef DOG_H
+# define DOG_H
 
-# include <iostream>
+# include "Animal.hpp"
 
-class Fixed{
-    private:
-        int                 _raw;
-        static const int    _bits = 8;
-    public:
-        Fixed();
-        Fixed(const Fixed& other);
-        Fixed& operator=(const Fixed& other);
-        ~Fixed();
+class Dog : public Animal{
 
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
+	public :
+		Dog();
+		Dog(const Dog& other);
+		Dog& operator=(const Dog& other);
+		~Dog();
+
+		void makeSound() const;
 };
 
 #endif

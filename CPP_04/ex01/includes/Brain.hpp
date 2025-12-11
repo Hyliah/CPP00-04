@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/26 16:02:27 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/11 19:43:04 by hlichten         ###   ########.fr       */
+/*   Created: 2025/12/11 21:40:52 by hlichten          #+#    #+#             */
+/*   Updated: 2025/12/11 22:21:55 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef BRAIN_H
+# define BRAIN
 
 # include <iostream>
 
-class Fixed{
-    private:
-        int                 _raw;
-        static const int    _bits = 8;
-    public:
-        Fixed();
-        Fixed(const Fixed& other);
-        Fixed& operator=(const Fixed& other);
-        ~Fixed();
+class Brain{
+	protected :
+		std::string _ideas[100];
 
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
+	public :
+		Brain();
+		Brain(Brain &other);
+		Brain& operator=(Brain& other);
+		~Brain();
 };
-
 #endif
