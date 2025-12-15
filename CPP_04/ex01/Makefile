@@ -7,7 +7,7 @@ INCLUDES    = -I includes
 
 OBJ_DIR     = obj
 
-SRC         = main.cpp src/Cat.cpp src/Dog.cpp src/Animal.cpp src/WrongAnimal.cpp src/WrongCat.cpp
+SRC         = main.cpp src/Cat.cpp src/Dog.cpp src/Animal.cpp src/WrongAnimal.cpp src/WrongCat.cpp src/Brain.cpp
 
 OBJ         = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 

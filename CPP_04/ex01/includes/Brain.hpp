@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 21:40:52 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/11 22:21:55 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:28:11 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_H
-# define BRAIN
+# define BRAIN_H
 
 # include <iostream>
 

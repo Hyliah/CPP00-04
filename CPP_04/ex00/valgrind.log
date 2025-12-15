@@ -1,0 +1,26 @@
+==368172== Memcheck, a memory error detector
+==368172== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==368172== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==368172== Command: ./Polymorphism
+==368172== Parent PID: 366027
+==368172== 
+==368172== 
+==368172== FILE DESCRIPTORS: 6 open (3 std) at exit.
+==368172== Open file descriptor 103: /usr/share/code/v8_context_snapshot.bin
+==368172==    <inherited from parent>
+==368172== 
+==368172== Open file descriptor 41: /home/hlichten/.config/Code/logs/20251215T154711/ptyhost.log
+==368172==    <inherited from parent>
+==368172== 
+==368172== Open file descriptor 3: /home/hlichten/Documents/CPP/CPP_04/ex00/valgrind.log
+==368172==    <inherited from parent>
+==368172== 
+==368172== 
+==368172== HEAP SUMMARY:
+==368172==     in use at exit: 0 bytes in 0 blocks
+==368172==   total heap usage: 7 allocs, 7 frees, 73,912 bytes allocated
+==368172== 
+==368172== All heap blocks were freed -- no leaks are possible
+==368172== 
+==368172== For lists of detected and suppressed errors, rerun with: -s
+==368172== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
