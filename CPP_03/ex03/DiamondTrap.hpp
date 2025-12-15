@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 21:28:30 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/10 21:35:53 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/15 17:58:30 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #ifndef DIAMOND_TRAP_H
 # define DIAMOND_TRAP_H
 
-class DiamondTrap : public FragTrap, public ScavTrap{
+class DiamondTrap : public ScavTrap, public FragTrap{
     private :
         std::string _name;
 	public :
