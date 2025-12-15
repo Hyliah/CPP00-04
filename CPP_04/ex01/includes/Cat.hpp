@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 18:42:42 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/11 22:27:16 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:51:00 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Cat : public Animal{
 	private :
-		Brain _brain;
+		Brain* _brain;
 	public :
 		Cat();
 		Cat(const Cat& other);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 18:42:38 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/11 20:13:15 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:50:15 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 # define DOG_H
 
 # include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal{
-
+	private :
+		Brain* _brain;
 	public :
 		Dog();
 		Dog(const Dog& other);
