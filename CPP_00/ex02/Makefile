@@ -1,4 +1,4 @@
-NAME        = ex00
+NAME        = TheJobOfYourDreams
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
@@ -6,7 +6,7 @@ RM          = rm -rf
 OBJ_DIR     = obj
 SRC_DIR     = .
 
-SRC         = Account.cpp Account.hpp tests.cpp
+SRC         = Account.cpp tests.cpp
 
 OBJ         = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
