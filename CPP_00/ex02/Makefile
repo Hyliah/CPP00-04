@@ -14,20 +14,20 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@echo "Compilation terminée : $(NAME)"
+	@echo "\033[0;35m ./$(NAME) \033[0m ready to use."
+	@echo " "
+	@echo "             ***    command to check    ***"
+	@echo "diff <(cut -c18- 19920104_091532.log) <(cut -c18- log_test.log)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(OBJ_DIR)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
-	@echo "Compilation de $< terminée."
 
 clean:
 	@$(RM) $(OBJ_DIR)
-	@echo "Dossier obj supprimé."
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "Exécutable supprimé."
 
 re: fclean all
 

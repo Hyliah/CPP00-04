@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:40:34 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/13 19:02:56 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/17 22:16:48 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,22 @@ static void	handle_spaces(std::string &str);
 static bool	verify_entry(const std::string& str, bool is_phone_number);
 static int	ask_set_contact(std::string message, std::string &buffer, Contact &contact, void (Contact::*setter)(std::string), bool is_phone);
 
-void	add_command(PhoneBook &book){
+int	add_command(PhoneBook &book){
 	std::string buffer;
 	Contact c;
 	
 	if (ask_set_contact("Enter First Name : ", buffer, c, (&Contact::set_first_name), false))
-		return ;
+		return 1;
 	if (ask_set_contact("Enter Last Name : ", buffer, c, (&Contact::set_last_name), false))
-		return ;
+		return 1;
 	if (ask_set_contact("Enter Nickname : ", buffer, c, (&Contact::set_nickname), false))
-		return ;
+		return 1;
 	if (ask_set_contact("Enter Phone Number : ", buffer, c, (&Contact::set_phone_number), true))
-		return ;
+		return 1;
 	if (ask_set_contact("Enter Darkest Secret : ", buffer, c, (&Contact::set_darkest_secret), false))
-		return ;
+		return 1;
 	book.add_contact(c);
+	return 0;
 }
 
 static int    ask_set_contact(std::string message, std::string &buffer, Contact &contact, void (Contact::*setter)(std::string), bool is_phone)

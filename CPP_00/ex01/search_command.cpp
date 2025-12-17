@@ -6,20 +6,23 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:35:17 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/13 19:18:07 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/17 22:42:25 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Utils.hpp"
 
+static void	print_labels();
 static std::string	adjust_format(std::string str);
 static void	print_contact(PhoneBook &book, int index);
-static void	display_contact(PhoneBook &book, int count);
+static int	display_contact(PhoneBook &book, int count);
 static bool	verify_number(int index_max, const std::string &str);
 
-void	search_command(PhoneBook &book){
+int	search_command(PhoneBook &book){
 	int	count = (book.get_count());
 
+	if (count > 0)
+		print_labels();
 	for (int i = 0; i < count ; i++)
 	{
 		Contact &c = book.get_contact(i);
@@ -28,10 +31,13 @@ void	search_command(PhoneBook &book){
 		std::cout << std::setw(10) << std::right << adjust_format(c.get_last_name()) << "|";
 		std::cout << std::setw(10) << std::right << adjust_format(c.get_nickname()) << std::endl;
 	}
-	if (book.get_count() >= 1)
-		(display_contact(book, count));
+	if (count >= 1){
+		if (display_contact(book, count))
+			return 1;
+	}
 	else
 		std::cout << "No contact to display" << std::endl;
+	return 0;
 }
 
 static std::string	adjust_format(std::string str)
@@ -41,19 +47,20 @@ static std::string	adjust_format(std::string str)
 	return str;
 }
 
-static void	display_contact(PhoneBook &book, int count){
+static int	display_contact(PhoneBook &book, int count){
 	std::string buffer;
 	int	index_max = count - 1;
 
 	std::cout << "Enter an index number : ";
 	if (get_line(buffer))
-		return;
+		return 1;
 	while (verify_number(index_max, buffer) == false){
 		std::cout << "Enter an index number : ";
 		if (get_line(buffer))
-			return;
+			return 1;
 	}
 	print_contact(book, static_cast<unsigned int>(buffer[0] - '0'));
+	return 0;
 }
 
 static void	print_contact(PhoneBook &book, int index)
@@ -78,4 +85,11 @@ static bool	verify_number(int index_max, const std::string &str)
 	
 	std::cout << "Enter a number between 0 and " << (index_max) << std::endl;
 	return false;
+}
+
+static void	print_labels(){
+	std::cout << std::setw(11) << std::right << "INDEX  ";
+	std::cout << std::setw(11) << std::right << "FIRST NAME";
+	std::cout << std::setw(11) << std::right << "LAST NAME ";
+	std::cout << std::setw(11) << std::right << "NICKNAME  " << std::endl;
 }

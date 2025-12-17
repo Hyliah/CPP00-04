@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 00:24:25 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/13 23:01:16 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/17 22:24:27 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,8 @@ int	exit_command(void){
 }
 
 int	get_line(std::string &buffer){
-	if (!std::getline(std::cin, buffer))
-	{
-		//std::cout << "Error: input failed." << std::endl;
+	if (!std::getline(std::cin, buffer)){
+		std::cout << "input failed" << std::endl;
 		return 1;
 	}
 	return 0;

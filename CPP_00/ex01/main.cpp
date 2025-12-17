@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 23:02:10 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/14 17:59:50 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/17 22:22:22 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,14 @@ int main()
 			std::cout << "Input failed." << std::endl;
 			return 1;
 		}
-		if (buffer == "ADD")
-			add_command(book);
-		else if (buffer == "SEARCH")
-			search_command(book);
+		if (buffer == "ADD"){
+			if (add_command(book))
+				return 1;
+		}
+		else if (buffer == "SEARCH"){
+			if (search_command(book))
+				return 1;
+		}
 		else if (buffer == "EXIT")
 			running = exit_command();
 	}
