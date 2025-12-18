@@ -1,4 +1,4 @@
-NAME        = Sed_is_for_losers
+NAME        = SedIsForLosers
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
@@ -14,7 +14,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@echo "\033[0;35m ./$(NAME) \033[0m ready to use"
+	@echo "\033[0;35m ./$(NAME) \033[0m ready to use. Enter a file and two occurences (S1 & S2)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(OBJ_DIR)

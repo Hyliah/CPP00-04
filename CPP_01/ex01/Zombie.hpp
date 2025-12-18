@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 16:54:19 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/20 15:36:56 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/18 18:09:05 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define ZOMBIE_H
 
 # include <iostream>
-# include <new>
 # include <stdio.h>
 # include <stdlib.h>
+# include <new>
 
 class Zombie{
 	private :
