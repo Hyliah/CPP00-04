@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 20:34:55 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/10 22:09:29 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:33:38 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ class FragTrap : virtual public ClapTrap {
 		~FragTrap();
 
 		void highFivesGuys(void);
+
+	protected :
+		static int _defaultHitPoint;
+		static int _defaultAttackDamage;
+		static int _defaultEnergyPoint;
 };
 
 #endif

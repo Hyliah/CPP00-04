@@ -6,14 +6,14 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 20:29:40 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/12 19:44:27 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/19 17:49:05 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.hpp"
 
-Contact::Contact(void){ 
+Contact::Contact(void) : _FirstName("default"), _LastName("default"), _Nickname("default"), _PhoneNumber("default"), _DarkestSecret("default"){ 
 }
 
 Contact::~Contact(void){

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 21:28:28 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/15 17:59:41 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:37:04 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), ScavTrap(), FragTrap(){
 	_name = "default";
 	ScavTrap::_name = "default_clap_name";
-	_hitPoints = FragTrap::_hitPoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage = FragTrap::_attackDamage;
-	std::cout << "DiamondTrap default constructor called for " << _name << std::endl;
-	std::cout << "HP = " << _hitPoints << " EP = " << _energyPoints << " AD = " << _attackDamage << std::endl; 
+	_hitPoints = FragTrap::_defaultHitPoint;
+	_energyPoints = ScavTrap::_defaultEnergyPoint;
+	_attackDamage = FragTrap::_defaultAttackDamage;
+	// std::cout << "DiamondTrap default constructor called for " << _name << std::endl;
+	// std::cout << "HP = " << _hitPoints << " EP = " << _energyPoints << " AD = " << _attackDamage << std::endl; 
 }
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name){

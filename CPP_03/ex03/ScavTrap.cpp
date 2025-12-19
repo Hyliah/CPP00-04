@@ -6,17 +6,21 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 23:53:44 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/10 22:09:17 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:34:21 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
+int ScavTrap::_defaultAttackDamage = 20;
+int ScavTrap::_defaultEnergyPoint = 50;
+int ScavTrap::_defaultHitPoint = 100;
+
 ScavTrap::ScavTrap() : ClapTrap(){
 	std::cout << "ScavTrap default constructor calledfor " << _name << std::endl;
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
+	_hitPoints = _defaultHitPoint;
+	_energyPoints = _defaultEnergyPoint;
+	_attackDamage = _defaultAttackDamage;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){

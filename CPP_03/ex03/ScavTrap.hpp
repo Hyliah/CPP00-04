@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 23:53:41 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/10 22:09:24 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:29:27 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ class ScavTrap : virtual public ClapTrap {
 		virtual void attack(const std::string& target);
 		void guardGate();
 
+	protected :
+		static int _defaultHitPoint;
+		static int _defaultAttackDamage;
+		static int _defaultEnergyPoint;
 };
 
 #endif

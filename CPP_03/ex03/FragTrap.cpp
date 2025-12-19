@@ -6,17 +6,21 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 20:34:59 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/10 21:26:55 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/19 16:34:09 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
+int FragTrap::_defaultAttackDamage = 30;
+int FragTrap::_defaultEnergyPoint = 100;
+int FragTrap::_defaultHitPoint = 100;
+
 FragTrap::FragTrap() : ClapTrap(){
 	std::cout << "FragTrap default constructor calledfor " << _name << std::endl;
-	_hitPoints = 100;
-	_energyPoints = 100;
-	_attackDamage = 30;
+	_hitPoints = _defaultHitPoint;
+	_energyPoints = _defaultEnergyPoint;
+	_attackDamage = _defaultAttackDamage;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
