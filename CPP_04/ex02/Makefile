@@ -1,33 +1,31 @@
-NAME        = ex00
+NAME        = AbstractClass
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 RM          = rm -rf
 
-OBJ_DIR     = obj
-SRC_DIR     = .
+INCLUDES    = -I includes
 
-SRC         = main.cpp fichiers.cpp
+OBJ_DIR     = obj
+
+SRC         = main.cpp src/Cat.cpp src/Dog.cpp src/Animal.cpp src/WrongAnimal.cpp src/WrongCat.cpp src/Brain.cpp
 
 OBJ         = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@echo "Compilation terminée : $(NAME)"
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) $(OBJ) -o $(NAME)
+	@echo "\033[0;35m ./$(NAME) \033[0m ready to use."
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@mkdir -p $(OBJ_DIR)
-	@$(CXX) $(CXXFLAGS) -c $< -o $@
-	@echo "Compilation de $< terminée."
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
 	@$(RM) $(OBJ_DIR)
-	@echo "Dossier obj supprimé."
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "Exécutable supprimé."
 
 re: fclean all
 
