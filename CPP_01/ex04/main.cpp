@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 19:00:40 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/19 17:47:01 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/21 18:56:19 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,16 @@ int main(int ac, char **av){
 	if (!file)
 		return (std::cout << "Error : file is not good" << std::endl, 1);
 	
-	std::string new_filename = av[1];
-	new_filename += ".replace";
-	
 	std::string s1 = av[2];
 	std::string s2 = av[3];
+
+	if ( s1.empty() || s2.empty()){
+		std::cerr << "Error: S1 or S2 not found" << std::endl;
+		return 1;
+	}
+
+	std::string new_filename = av[1];
+	new_filename += ".replace";
 	
 	std::string buffer = create_buffer(file, s1, s2);
 	std::ofstream new_file(new_filename.c_str());
