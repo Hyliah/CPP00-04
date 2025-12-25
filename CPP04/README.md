@@ -1,10 +1,10 @@
 <!-- README.md -->
 <h1 align="center">
-  CPP02
+  CPP04
 </h1>
 
 <p align="center">
-  <i>C++ module CPP02 – 42 Common Core</i><br>
+  <i>C++ module CPP04 – 42 Common Core</i><br>
   <strong>Developed in C++ by <a href="https://github.com/Hyliah">@Hyliah</a></strong>
 </p>
 
