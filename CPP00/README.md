@@ -17,13 +17,13 @@
 
 ---
 
-<h2 align="center">♦ Objective ♦</h2>
+<h2>♦ Objective ♦</h2>
 
 The goal of this module is to introduce and practice fundamental C++ concepts, with a strong focus on **object-oriented programming**, strict compilation rules, and clean design.
 
 ---
 
-<h2 align="center">♦ Concepts Covered ♦</h2>
+<h2>♦ Concepts Covered ♦</h2>
 
 - Classes and instances  
 - Namespaces  
@@ -32,7 +32,7 @@ The goal of this module is to introduce and practice fundamental C++ concepts, w
 
 ---
 
-<h2 align="center">♦ Exercises ♦</h2>
+<h2>♦ Exercises ♦</h2>
 
 | Exercise | Name | Description |
 |--------|-------------|----------|
@@ -58,11 +58,11 @@ make
 
 ---
 
-<h2 align="center">♦ Personal Notes ♦</h2>
+<h2>♦ Personal Notes ♦</h2>
 
 ---
 
-<h2 align="center">♦ Author ♦</h2>
+<h2>♦ Author ♦</h2>
 
 42 login: hlichten
 
