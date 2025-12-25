@@ -5,7 +5,7 @@
 
 <p align="center">
   <i>C++ module CPP01 – 42 Common Core</i><br>
-  <strong>Developed in C++ by <a href="https://github.com/your_login">@your_login</a></strong>
+  <strong>Developed in C++ by <a href="https://github.com/Hyliah">@Hyliah</a></strong>
 </p>
 
 <p align="center">
