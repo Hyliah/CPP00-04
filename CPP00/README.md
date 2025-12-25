@@ -25,22 +25,20 @@ The goal of this module is to introduce and practice fundamental C++ concepts, w
 
 <h2 align="center">♦ Concepts Covered ♦</h2>
 
-- Concept 1
-- Concept 2
-- Concept 3
-
-> (Adjust this list depending on the module)
+- Classes and instances  
+- Namespaces  
+- std::string  
+- Input/output streams
 
 ---
 
 <h2 align="center">♦ Exercises ♦</h2>
 
 | Exercise | Name | Description |
-|--------|-------------|
-| ex00 | Megaphone | Introduction exercise |
-| ex01 | My Awesome PhoneBook | concept implementation |
-| ex02 | The Job Of Your Dreams | Advanced usage |
-| ex03 | Additional features / edge cases |
+|--------|-------------|----------|
+| ex00 | Megaphone | Basic program using std::cin / std::cout and string manipulation |
+| ex01 | My Awesome PhoneBook | Simple contact manager using classes, arrays and std::getline |
+| ex02 | The Job Of Your Dreams | Recreate missing source file from header, logs and main |
 
 ---
 
@@ -61,12 +59,6 @@ make
 ---
 
 <h2 align="center">♦ Personal Notes ♦</h2>
-
-Difficulties encountered
-
-Concepts that required extra attention
-
-What I would improve with more time
 
 ---
 
