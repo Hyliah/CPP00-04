@@ -60,6 +60,13 @@ make
 
 <h2>♦ Personal Notes ♦</h2>
 
+<p>[Fixed Point Diagram]</p>
+<img src="ASSETS/fixed_point_diagram.png" width="90%" alt="Fixed Point Diagram">
+
+<p>[BSP Visual]</p>
+<img src="ASSETS/BSP_visual.png" width="90%" alt="BSP Visual">
+
+
 ---
 
 <h2>♦ Author ♦</h2>
