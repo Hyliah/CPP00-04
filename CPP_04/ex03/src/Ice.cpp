@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:37:38 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/21 18:48:24 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/24 23:33:30 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ Ice::Ice(Ice& other){
 }
 
 Ice& Ice::operator=(Ice& other){
+    if (this != other){
+
+    }
+    return (*this);
 }
 
 Ice::~Ice(){

@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:00:56 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/21 18:20:08 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/24 23:34:08 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ICharacter::ICharacter(ICharacter &other){
 }
 
 ICharacter& ICharacter::operator=(ICharacter &other){
-	if (this!=other){
+	if (this != other){
 
 	}
 	return (*this);

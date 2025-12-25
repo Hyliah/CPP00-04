@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 17:07:29 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/21 18:36:52 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/25 03:30:31 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // -------- Constructors and Destructor -----------
 
 IMateriaSource::IMateriaSource(){
-
 }
 
 IMateriaSource::IMateriaSource(IMateriaSource& other){
@@ -23,7 +22,10 @@ IMateriaSource::IMateriaSource(IMateriaSource& other){
 }
 
 IMateriaSource& IMateriaSource::operator=(IMateriaSource& other){
+    if (this != other){
 
+    }
+    return (*this);
 }
 
 IMateriaSource::~IMateriaSource(){
