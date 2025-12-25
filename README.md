@@ -5,7 +5,7 @@
 
 <p align="center">
   <i>C++ learning modules from CPP00 to CPP05, part of the 42 Common Core.</i><br>
-  <strong>Developed in C++ by <a href="https://github.com/your_login">@Hyliah</a></strong>
+  <strong>Developed in C++ by <a href="https://github.com/Hyliah">@Hyliah</a></strong>
 </p>
 
 <p align="center">
