@@ -52,7 +52,7 @@ exemple :
 
 ```bash
 make
-./Megaphone ready to use.
+ ./megaphone  ready to use : put none or any argument to use the megaphone
 ./Megaphone
 ```
 

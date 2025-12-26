@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 17:51:30 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/20 18:19:36 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/26 14:45:57 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    std::string     str = "HI THIS IS BEAIN";
+    std::string     str = "HI THIS IS BRAIN";
     std::string*    stringPTR = &str;
     std::string&    stringREF = str;
 

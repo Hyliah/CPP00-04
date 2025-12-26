@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 17:09:54 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/29 00:43:31 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/26 14:16:12 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,41 +18,30 @@ static bool is_in_ascii(char *str);
 
 int	main(int ac, char **av)
 {
-	if (is_in_ascii(av[1]) == false)
-		return (std::cout << "megaphone understand only ascii printable entries." << std::endl, 1);
-	if (ac < 2)
+	if (ac < 2){
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
+		return (0);
+	}
+	if (!is_in_ascii(av[1])){
+		std::cout << "Megaphone understand only ascii printable entries." << std::endl;
+		return (1);
+	}
+	else {
 		std::string buffer;
 		for (int i = 1; i < ac; i++){
 			buffer += av[i];
 		}
 		for (size_t i = 0; i < buffer.length(); i++)
 			buffer[i] = std::toupper(buffer[i]);
-		
 		std::cout << buffer << std::endl;
 	}
-	return 0;
+	return (0);
 }
 
 static bool is_in_ascii(char *str){
-	for (int i = 0; str[i]; i++){
+	for (int i = 0; str[i] != '\0'; i++){
 		if (str[i] < 32 || str[i] > 127)
 			return false;
 	}
 	return true;
 }
-
-/*
-Just to make sure that everybody is awake, write a program that produces the following output:
-
-$>./megaphone "shhhhh... I think the students are asleep..."
-SHHHHH... I THINK THE STUDENTS ARE ASLEEP...
-$>./megaphone Damnit ' ! ' "Sorry students, I thought this thing was off."
-DAMNIT ! SORRY STUDENTS, I THOUGHT THIS THING WAS OFF.
-$>./megaphone
-* LOUD AND UNBEARABLE FEEDBACK NOISE *
-$>
-
-*/
