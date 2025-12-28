@@ -3,25 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 15:58:34 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/21 18:24:59 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/28 20:00:53 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "IMateriaSource.hpp"
+
+// Interface cant be instantiated directly so no .cpp file is needed
+class AMateria;
+
+#ifndef ICHARACTER_HPP
+# define ICHARACTER_HPP
 
 class ICharacter
 {
-	protected :
-		std::string _Name;
-
 	public:
-		ICharacter();
-		ICharacter(ICharacter &other);
-		ICharacter& operator=(ICharacter &other);
 		virtual ~ICharacter() {}
 
 		virtual std::string const& getName() const = 0;
@@ -29,3 +28,5 @@ class ICharacter
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
 };
+
+#endif

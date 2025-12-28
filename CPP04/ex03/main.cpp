@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 17:57:31 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/21 18:15:01 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/28 19:04:14 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
+
 
 int main() {
 	IMateriaSource* src = new MateriaSource();
@@ -33,4 +38,6 @@ int main() {
 	delete bob;
 	delete me;
 	delete src;
-return 0; }
+
+	return 0; 
+}

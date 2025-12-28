@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:00:59 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/24 23:55:12 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/28 20:14:01 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 // -------- Constructors and Destructor -----------
-AMateria::AMateria(){
+AMateria::AMateria() : _type("undefined") {
 }
 
-AMateria::AMateria(std::string const & type){
+AMateria::AMateria(std::string const & type) : _type(type) {
 }
 
-AMateria::AMateria(AMateria& other){
+AMateria::AMateria(const AMateria& other) : _type(other._type) {
 }
 
-AMateria& AMateria::operator=(AMateria& other){
-	if (this != other){
-
+AMateria& AMateria::operator=(const AMateria& other){
+	if (this != &other){
+		_type = other._type;
 	}
 	return (*this);
 }
@@ -33,13 +33,10 @@ AMateria::~AMateria(){
 
 // -------- Other member functions ---------
 
-//Returns the materia type
 std::string const & AMateria::getType() const{
 	return (_type);
 }
 
-virtual AMateria* AMateria::clone() const{
-}
-
-virtual void AMateria::use(ICharacter& target){
+void AMateria::use(ICharacter& target){
+	std::cout << "* uses " << _type << " on " << target.getName() << " *" << std::endl;
 }
