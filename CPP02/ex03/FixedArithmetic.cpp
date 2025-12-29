@@ -6,9 +6,12 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 02:31:10 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/29 17:15:03 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/29 19:18:29 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Fixed.hpp"
+#include <climits>
 
 #include "Fixed.hpp"
 #include <climits>
@@ -23,8 +26,8 @@
 Fixed Fixed::operator+(const Fixed& other) const {
 	Fixed result;
 
-	if ((_raw > 0 && other._raw > INT_MAX - _raw) ||
-		(_raw < 0 && other._raw < INT_MIN - _raw)) {
+	if ((other._raw > 0 && _raw > INT_MAX - other._raw) ||
+		(other._raw < 0 && _raw < INT_MIN - other._raw)) {
 		std::cout << "Fixed addition overflow" << std::endl;
 		return *this;
 	}
@@ -32,6 +35,7 @@ Fixed Fixed::operator+(const Fixed& other) const {
 	result._raw = _raw + other._raw;
 	return result;
 }
+
 
 /**
  * @brief Subtracts one Fixed number from another with overflow protection.
@@ -40,19 +44,19 @@ Fixed Fixed::operator+(const Fixed& other) const {
  * @return A new Fixed object containing the result.
  * @warning Prints an overflow warning if the result exceeds int range.
  */
-
-Fixed Fixed::operator+(const Fixed& other) const {
+Fixed Fixed::operator-(const Fixed& other) const {
 	Fixed result;
 
-	if ((other._raw > 0 && _raw > INT_MAX - other._raw) ||
-	    (other._raw < 0 && _raw < INT_MIN - other._raw)) {
-		std::cout << "Fixed addition overflow" << std::endl;
+	if ((other._raw < 0 && _raw > INT_MAX + other._raw) ||
+	    (other._raw > 0 && _raw < INT_MIN + other._raw)) {
+		std::cout << "Fixed subtraction overflow" << std::endl;
 		return *this;
 	}
 
-	result._raw = _raw + other._raw;
+	result._raw = _raw - other._raw;
 	return result;
 }
+
 
 
 /**
