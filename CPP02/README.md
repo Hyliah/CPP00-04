@@ -64,7 +64,7 @@ make
 <img src="ASSETS/fixed_point_diagram.png" width="90%" alt="Fixed Point Diagram">
 
 <p>[Copy Constructor, Assignment operator= and Deep Copy]</p>
-<img src="copies_helpcenter.png" width="90%" alt="Copy Constructor, Assignment operator= and Deep Copy">
+<img src="ASSETS/copies_helpcenter.png" width="90%" alt="Copy Constructor, Assignment operator= and Deep Copy">
 
 <p>[BSP Visual]</p>
 <img src="ASSETS/BSP_visual.png" width="90%" alt="BSP Visual">
