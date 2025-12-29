@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:02:19 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/28 22:28:56 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/29 16:30:44 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,12 @@ Fixed::Fixed():_raw(0){
 
 Fixed::Fixed(const Fixed& other) : _raw(other._raw){
 	std::cout << "Copy constructor called" << std::endl;
-	//*this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other){
 	std::cout << "Copy assignment operator called" << std::endl;
 	if(this != &other)
 		this->_raw = other._raw;
-		//this->_raw = other.getRawBits();
 	return (*this);
 }
 

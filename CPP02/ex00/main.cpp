@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 16:02:06 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/28 22:23:41 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/29 16:31:20 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
 
 int main( void ){
 	Fixed a;
@@ -25,3 +24,5 @@ int main( void ){
 	std::cout << c.getRawBits() << std::endl;
 	return 0;
 }
+
+//main offered by the subject

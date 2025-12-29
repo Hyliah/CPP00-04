@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   FixedIncrementDecrement.cpp                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 02:32:24 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/29 21:49:56 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/29 17:14:18 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <climits>
 
 /**
  * @brief Post-increment operator. Increments the value but returns the previous one.
@@ -19,12 +20,12 @@
  * @warning Detects and warns on overflow.
  */
 Fixed	Fixed::operator++(int){
-    Fixed ret(*this);
-    if (_raw > std::numeric_limits<int>::max() - (1 << _bits))
-        std::cout << "Fixed overflow in ++" << std::endl;
-    else
-        _raw ++;
-    return (ret);
+	Fixed ret(*this);
+	if (_raw >= INT_MAX - (1 << _bits))
+		std::cout << "Fixed overflow in ++" << std::endl;
+	else
+		++_raw;
+	return (ret);
 }
 
 /**
@@ -34,11 +35,11 @@ Fixed	Fixed::operator++(int){
  * @warning Detects and warns on overflow.
  */
 Fixed&	Fixed::operator++(){
-    if (_raw > std::numeric_limits<int>::max() - (1 << _bits))
-        std::cout << "Fixed overflow in ++" << std::endl;
-    else
-        _raw++;
-    return (*this);
+	if (_raw >= INT_MAX)
+		std::cout << "Fixed overflow in ++" << std::endl;
+	else
+		++_raw;
+	return (*this);
 }
 
 /**
@@ -48,13 +49,14 @@ Fixed&	Fixed::operator++(){
  * @warning Detects and warns on underflow.
  */
 Fixed Fixed::operator--(int){
-    Fixed ret(*this);
+	Fixed ret(*this);
 
-    if (_raw < std::numeric_limits<int>::min() + (1 << _bits))
-        std::cout << "Fixed underflow in --" << std::endl;
-    else
-        _raw--;
-    return ret;
+	if (_raw <= INT_MIN + (1 << _bits))
+		std::cout << "Fixed underflow in --" << std::endl;
+	else
+		--_raw;
+
+	return ret;
 }
 
 /**
@@ -63,10 +65,10 @@ Fixed Fixed::operator--(int){
  * @return Reference to this Fixed instance.
  * @warning Detects and warns on underflow.
  */
-Fixed&	Fixed::operator--(){
-    if (_raw < std::numeric_limits<int>::min() + (1 << _bits))
-        std::cout << "Fixed overflow in --" << std::endl;
-    else
-        _raw--;
-    return (*this);
+Fixed& Fixed::operator--(){
+	if (_raw <= INT_MIN)
+		std::cout << "Fixed overflow in --" << std::endl;
+	else
+		--_raw;
+	return *this;
 }

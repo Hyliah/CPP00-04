@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 19:32:31 by hlichten          #+#    #+#             */
-/*   Updated: 2025/11/26 19:38:59 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/29 16:31:48 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,5 @@ int main( void ) {
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
     return 0;
 }
+
+//main offered by the subject
