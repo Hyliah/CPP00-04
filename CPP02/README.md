@@ -63,9 +63,14 @@ make
 <p>[Fixed Point Diagram]</p>
 <img src="ASSETS/fixed_point_diagram.png" width="90%" alt="Fixed Point Diagram">
 
+<p>[Copy Constructor, Assignment operator= and Deep Copy]</p>
+<img src="copies_helpcenter.png" width="90%" alt="Copy Constructor, Assignment operator= and Deep Copy">
+
 <p>[BSP Visual]</p>
 <img src="ASSETS/BSP_visual.png" width="90%" alt="BSP Visual">
 
+CPP - Homemade HelpCenter : 
+https://www.figma.com/board/YLwrD2ZJmG2QEYdvLQ85o0/CPP_help-center?node-id=0-1&t=rvW7b2dDy1z6ygfJ-1
 
 ---
 
