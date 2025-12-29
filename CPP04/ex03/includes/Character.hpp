@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:01:05 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/28 19:02:57 by hlichten         ###   ########.fr       */
+/*   Updated: 2025/12/29 15:02:58 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,18 @@ class AMateria;
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-typedef struct s_floor
-{
-	struct s_floor* head;
-	int		index;
-}				t_floor;
-
 typedef struct s_item
 {
 	AMateria*			materia;
 	struct s_item*		next;
 }				t_item;
+
+typedef struct s_floor
+{
+	t_item* head;
+	int		index;
+}				t_floor;
+
 
 // container and user of Materia
 class Character : public ICharacter {
