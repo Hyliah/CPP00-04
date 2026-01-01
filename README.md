@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <i>C++ learning modules from CPP00 to CPP05, part of the 42 Common Core.</i><br>
+  <i>C++ learning modules from CPP00 to CPP04, part of the 42 Common Core.</i><br>
   <strong>Developed in C++ by <a href="https://github.com/Hyliah">@Hyliah</a></strong>
 </p>
 
@@ -19,7 +19,7 @@
 
 <h2 align="center">♦ Overview ♦</h2>
 
-This repository contains my implementation of the **CPP00 to CPP05 modules** from the 42 C++ piscine.  
+This repository contains my implementation of the **CPP00 to CPP04 modules** from the 42 C++ piscine.  
 The goal of these projects is to progressively discover **object-oriented programming in C++**, while respecting strict constraints such as the **C++98 standard**, memory safety, and clean architecture.
 
 Each module introduces new concepts and builds upon the previous ones.
