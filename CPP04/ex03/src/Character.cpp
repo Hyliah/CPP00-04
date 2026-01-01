@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:01:08 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/28 20:20:55 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/01 03:01:17 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Character::Character() : _name("Unnamed"), _floor(create_floor()) {
 Character::Character(const std::string& name) : _name(name), _floor(create_floor()) {
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
-	_floor = create_floor();
 }
 
 Character::Character(const Character& other) : _name(other._name) {
@@ -69,7 +68,7 @@ void Character::equip(AMateria* m) {
 		return;
 	for (int i = 0; i < 4; i++) {
 		if (_inventory[i] == NULL) {
-			_inventory[i] = m;
+			_inventory[i] = m->clone();
 			return;
 		}
 	}

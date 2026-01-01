@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 17:57:31 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/28 19:04:14 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/01 03:11:25 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include "Character.hpp"
 #include "MateriaSource.hpp"
 
+// ---------- subject main ------------
 
 int main() {
 	IMateriaSource* src = new MateriaSource();
