@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 23:53:44 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/10 20:39:37 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/05 15:54:43 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ void ScavTrap::attack(const std::string& target){
 }
 
 void ScavTrap::guardGate(){
-	std::cout << "ScavTrap " << _name << "is in Guard mode" << std::endl;
+	std::cout << "ScavTrap " << _name << " is in Guard mode" << std::endl;
 }

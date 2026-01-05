@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:01:08 by hlichten          #+#    #+#             */
-/*   Updated: 2026/01/01 03:01:17 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/05 16:44:16 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ Character& Character::operator=(const Character& other) {
 	if (this != &other) {
 		_name = other._name;
 		for (int i = 0; i < 4; i++) {
-			delete _inventory[i];
+//			if (_inventory[i] != NULL)
+				delete _inventory[i];
 			if (other._inventory[i])
 				_inventory[i] = other._inventory[i]->clone();
 			else
@@ -68,7 +69,7 @@ void Character::equip(AMateria* m) {
 		return;
 	for (int i = 0; i < 4; i++) {
 		if (_inventory[i] == NULL) {
-			_inventory[i] = m->clone();
+			_inventory[i] = m;
 			return;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 16:13:22 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/29 15:15:57 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/05 18:36:07 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ MateriaSource::MateriaSource(const MateriaSource& other) {
 MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
 	if (this != &other) {
 		for (int i = 0; i < 4; i++) {
-			delete _materias[i];
+//			if (_materias[i] != NULL)
+				delete _materias[i];
 			if (other._materias[i])
 				_materias[i] = other._materias[i]->clone();
 			else
@@ -57,7 +58,7 @@ void MateriaSource::learnMateria(AMateria* m) {
 		return;
 	for (int i = 0; i < 4; i++) {
 		if (_materias[i] == NULL) {
-			_materias[i] = m->clone();
+			_materias[i] = m;
 			return;
 		}
 	}
