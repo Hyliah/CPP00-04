@@ -33,7 +33,7 @@ Each module introduces new concepts and builds upon the previous ones.
 | CPP00 | Classes, namespaces, std::string, streams | 100% |
 | CPP01 | Memory allocation, references, pointers | 100% |
 | CPP02 | Operator overloading, canonical form | 100% |
-| CPP03 | Inheritance | Waiting for evaluation |
+| CPP03 | Inheritance | 100% |
 | CPP04 | Polymorphism, abstract classes, interfaces | Waiting for evaluation |
 
 ---
