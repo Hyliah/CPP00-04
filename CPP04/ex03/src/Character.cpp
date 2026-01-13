@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:01:08 by hlichten          #+#    #+#             */
-/*   Updated: 2026/01/05 16:44:16 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/12 22:59:16 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 Character::Character() : _name("Unnamed"), _floor(create_floor()) {
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
+	std::cout << "Character " << _name << " created with 4 free slots in inventory" << std::endl; //not asked in the subject, more readable for tests
 }
 
 Character::Character(const std::string& name) : _name(name), _floor(create_floor()) {
 	for (int i = 0; i < 4; i++)
 		_inventory[i] = NULL;
+	std::cout << "Character " << _name << " created with 4 free slots in inventory" << std::endl; //not asked in the subject, more readable for tests
 }
 
 Character::Character(const Character& other) : _name(other._name) {
@@ -39,7 +41,6 @@ Character& Character::operator=(const Character& other) {
 	if (this != &other) {
 		_name = other._name;
 		for (int i = 0; i < 4; i++) {
-//			if (_inventory[i] != NULL)
 				delete _inventory[i];
 			if (other._inventory[i])
 				_inventory[i] = other._inventory[i]->clone();
@@ -70,9 +71,11 @@ void Character::equip(AMateria* m) {
 	for (int i = 0; i < 4; i++) {
 		if (_inventory[i] == NULL) {
 			_inventory[i] = m;
+			std::cout << "Materia " << m->getType() << " equiped" << std::endl; //not asked in the subject, more readable for tests
 			return;
 		}
 	}
+	std::cout << "❌ Materia can't be equiped" << std::endl; //not asked in the subject, more readable for tests
 }
 
 void Character::unequip(int idx) {
@@ -85,7 +88,10 @@ void Character::unequip(int idx) {
 void Character::use(int idx, ICharacter& target) {
 	if (idx >= 0 && idx < 4 && _inventory[idx]) {
 		_inventory[idx]->use(target);
+		std::cout << "Materia " << _inventory[idx]->getType() << " used by " << _name << std::endl; //not asked in the subject, more readable for tests
 	}
+	else
+		std::cout << "❌ Nothing to be used by " << _name << std::endl; //not asked in the subject, more readable for tests
 }
 
 // -------- Helper functions for floor management ---------

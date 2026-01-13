@@ -58,8 +58,20 @@ make
 ```
 
 ---
-
 <h2>♦ Personal Notes ♦</h2>
+
+<p>[Different classes explained]</p>
+<img src="ASSETS/ClassesResume.png" width="90%" alt="Different classes explained">
+
+<p>[ex03 : AMateria visual : AMateria Creation]</p>
+<img src="ASSETS/AMateriaCreation.png" width="90%" alt="ex03 : AMateria visual : AMateria Creation">
+
+<p>[ex03 : AMateria visual : AMateria Usage]</p>
+<img src="ASSETS/AMateriaUsage.png" width="90%" alt="ex03 : AMateria visual : AMateria Usage">
+
+CPP - Homemade HelpCenter : 
+<a href="https://www.figma.com/board/YLwrD2ZJmG2QEYdvLQ85o0/CPP_help-center?node-id=0-1&t=rvW7b2dDy1z6ygfJ-1">CPP HelpCenter</a>
+
 
 ---
 

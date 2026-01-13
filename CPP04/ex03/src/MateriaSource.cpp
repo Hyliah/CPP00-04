@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 16:13:22 by hlichten          #+#    #+#             */
-/*   Updated: 2026/01/05 18:36:07 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/12 22:52:46 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 MateriaSource::MateriaSource() {
 	for (int i = 0; i < 4; i++)
 		_materias[i] = NULL;
+		std::cout << "MateriaSource created with 4 free slots\n" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& other) {
@@ -59,21 +60,20 @@ void MateriaSource::learnMateria(AMateria* m) {
 	for (int i = 0; i < 4; i++) {
 		if (_materias[i] == NULL) {
 			_materias[i] = m;
+			std::cout << "Materia " << m->getType() << " learned" << std::endl; //not asked in the subject, more readable for tests
 			return;
 		}
 	}
-	// If we reach here, it means there was no empty slot, materia is not ignored
+	std::cout << "❌ Not slots left, can't be learned" << std::endl;
 }
-
-// Returns a new Materia. 
-// The latter is a copy of the Materia previously learned by the MateriaSource whose type equals the one passed as parameter. 
-// Returns 0 if the type is unknown.
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
 	for (int i = 0; i < 4; i++) {
 		if (_materias[i] && _materias[i]->getType() == type) {
+			std::cout << "Materia " << type << " created" << std::endl; //not asked in the subject, more readable for tests
 			return _materias[i]->clone();
 		}
 	}
+	std::cout << "❌ Materia can't be created" << std::endl; //not asked in the subject, more readable for tests
 	return NULL;
 }
