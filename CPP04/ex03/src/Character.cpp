@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 15:01:08 by hlichten          #+#    #+#             */
-/*   Updated: 2026/01/12 22:59:16 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/13 01:55:18 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Character& Character::operator=(const Character& other) {
 	if (this != &other) {
 		_name = other._name;
 		for (int i = 0; i < 4; i++) {
-				delete _inventory[i];
+			delete _inventory[i];
 			if (other._inventory[i])
 				_inventory[i] = other._inventory[i]->clone();
 			else

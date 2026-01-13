@@ -6,7 +6,7 @@
 /*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 16:13:22 by hlichten          #+#    #+#             */
-/*   Updated: 2026/01/12 22:52:46 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/13 01:55:01 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "AMateria.hpp"
 
 // -------- Constructors and Destructor -----------
+
 MateriaSource::MateriaSource() {
 	for (int i = 0; i < 4; i++)
 		_materias[i] = NULL;
@@ -32,8 +33,7 @@ MateriaSource::MateriaSource(const MateriaSource& other) {
 MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
 	if (this != &other) {
 		for (int i = 0; i < 4; i++) {
-//			if (_materias[i] != NULL)
-				delete _materias[i];
+			delete _materias[i];
 			if (other._materias[i])
 				_materias[i] = other._materias[i]->clone();
 			else
@@ -48,11 +48,7 @@ MateriaSource::~MateriaSource() {
 		delete _materias[i];
 }
 
-// -------- Other member functions ---------
-
-// Copies the Materia passed as a parameter and stores it in memory so it can be cloned later.
-// Like the Character, the MateriaSource can know at most 4 Materias. 
-// They are not necessarily unique.
+// -------- Other Member Functions ---------
 
 void MateriaSource::learnMateria(AMateria* m) {
 	if (!m)

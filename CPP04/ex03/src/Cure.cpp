@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:37:40 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/28 19:46:24 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/13 01:55:33 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
+// -------- Constructors and Destructor -----------
 
 Cure::Cure() : AMateria("cure") {
 }
@@ -28,6 +29,8 @@ Cure& Cure::operator=(const Cure& other){
 
 Cure::~Cure(){
 }
+
+// -------- Other Member Functions -----------
 
 AMateria* Cure::clone() const{
     return new Cure(*this);

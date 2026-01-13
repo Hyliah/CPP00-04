@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hlichten <hlichten@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hlichten <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 18:00:59 by hlichten          #+#    #+#             */
-/*   Updated: 2025/12/28 20:14:01 by hlichten         ###   ########.fr       */
+/*   Updated: 2026/01/13 01:52:43 by hlichten         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+
 // -------- Constructors and Destructor -----------
+
 AMateria::AMateria() : _type("undefined") {
 }
 
