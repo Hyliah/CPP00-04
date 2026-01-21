@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C++-blue.svg" />
   <img src="https://img.shields.io/badge/Standard-C++98-blueviolet.svg" />
-  <img src="https://img.shields.io/badge/Status-5x100%-violet" />
+  <img src="https://img.shields.io/badge/Status-finished-violet.svg" />
   <img src="https://img.shields.io/badge/School-42 Lausanne-pink.svg" />
 </p>
 
